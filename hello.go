@@ -9,5 +9,8 @@ func main() {
 func Hello(name string) string {
 	englishHelloPrefix := "Hello, "
 	exclamation := "!"
+	if name == "" {
+		name = "World"
+	} 
 	return englishHelloPrefix + name + exclamation
 }
