@@ -7,5 +7,7 @@ func main() {
 }
 
 func Hello(name string) string {
-	return "Hello, " + name + "!"
+	englishHelloPrefix := "Hello, "
+	exclamation := "!"
+	return englishHelloPrefix + name + exclamation
 }
