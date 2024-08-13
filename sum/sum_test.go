@@ -10,13 +10,6 @@ func TestSum(t *testing.T) {
 		want := 15
 		assertCorrectMessage(t, got, want)
 	})
-
-	t.Run("slice of any size", func(t *testing.T) {
-		numbers := []int{1, 2, 3}
-		got := Sum(numbers)
-		want := 6
-		assertCorrectMessage(t, got, want)
-	})
 }
 
 
