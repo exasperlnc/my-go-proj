@@ -1,6 +1,6 @@
 package perimeter 
 
-// import "math"
+import "math"
 
 // Perimiter takes the width and height of a rectangle and returns the perimeter
 func Perimeter(rectangle Rectangle) float64 {
@@ -8,11 +8,23 @@ func Perimeter(rectangle Rectangle) float64 {
 }
 
 // Area takes the width and height of a rectangle and returns the area
-func Area(rectangle Rectangle) float64 {
-	return rectangle.Width * rectangle.Height
+func (r Rectangle) Area() float64 {
+	return r.Width * r.Height
 }
 
 type Rectangle struct {
 	Width float64
 	Height float64
+}
+
+type Circle struct {
+	Radius float64
+}
+
+func (c Circle) Area() float64{
+	return math.Pi * c.Radius * c.Radius
+}
+
+type Shape interface {
+	Area() float64
 }
