@@ -10,6 +10,7 @@ func TestRomanNumerals(t *testing.T) {
 	}{
 		{"1 converts to I", 1, "I"},
 		{"2 converts to II", 2, "II"},
+		{"3 converts to III", 3, "III"},
 	}
 
 	for _, test := range cases {
