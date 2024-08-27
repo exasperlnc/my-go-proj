@@ -35,7 +35,11 @@ func TestSErver(t *testing.T) {
 
 		if response.Body.String() != data {
 			t.Errorf(`got "%s", want "%s"`, response.Body.String(), data)
-		} 		
+		}
+		
+		if store.cancelled {
+			t.Error("it should not have cancelled the store")
+		}
 	})
 
 	t.Run("sad path (cancelled)", func (t *testing.T) {
