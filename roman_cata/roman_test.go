@@ -2,7 +2,7 @@ package romancata
 
 import "testing"
 
-func TestRom(t *testing.T) {
+func TestRomanNumerals(t *testing.T) {
 	got := ConvertToRoman(1)
 	want := "I"
 
